@@ -1,13 +1,30 @@
 // Top-level build file where you can add configuration options common to all sub-projects/modules.
 
 buildscript {
-    
+    ext{
+
+    }
     repositories {
-        google()
-        jcenter()
+        gradlePluginPortal()
+        google {
+            content {
+                includeGroupByRegex("com\\.android.*")
+                includeGroupByRegex("com\\.google.*")
+                includeGroupByRegex("androidx.*")
+            }
+        }
+        mavenCentral()
+        maven { url 'https://maven.pkg.jetbrains.space/public/p/compose/dev' }
+        maven { url 'https://api.xposed.info/' }
+        maven { url "https://maven.aliyun.com/repository/jcenter" }
+        maven { url 'https://jitpack.io' }
+        maven { url 'https://www.dfki.uni-kl.de/artifactory/libs-releases/' }
+        maven { url 'https://s3.amazonaws.com/repo.commonsware.com' }
+        maven { url 'https://jogamp.org/deployment/maven' }
+        maven { url 'https://raw.githubusercontent.com/cybernhl/maven-repository/master/' }
     }
     dependencies {
-          classpath "com.android.tools.build:gradle:4.1.1"
+          classpath "com.android.tools.build:gradle:8.11.1"
         
 
         // NOTE: Do not place your application dependencies here; they belong
@@ -17,8 +34,16 @@ buildscript {
 
 allprojects {
     repositories {
+        mavenCentral()
         google()
-        jcenter()
+        maven { url 'https://maven.pkg.jetbrains.space/public/p/compose/dev' }
+        maven { url 'https://api.xposed.info/' }
+        maven { url "https://maven.aliyun.com/repository/jcenter" }
+        maven { url 'https://jitpack.io' }
+        maven { url 'https://www.dfki.uni-kl.de/artifactory/libs-releases/' }
+        maven { url 'https://s3.amazonaws.com/repo.commonsware.com' }
+        maven { url 'https://jogamp.org/deployment/maven' }
+        maven { url 'https://raw.githubusercontent.com/cybernhl/maven-repository/master/' }
     }
 }
 

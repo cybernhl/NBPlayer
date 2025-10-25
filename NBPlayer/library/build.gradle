@@ -3,8 +3,11 @@ apply plugin: 'com.android.library'
 android {
     compileSdkVersion 28
 
-
-
+    namespace "com.renhui.nbplayer"
+    buildFeatures {
+        viewBinding true
+        buildConfig true
+    }
     defaultConfig {
         minSdkVersion 19
         targetSdkVersion 28

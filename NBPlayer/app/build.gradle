@@ -2,8 +2,14 @@ apply plugin: 'com.android.application'
 
 android {
     compileSdkVersion 28
+    namespace "com.renhui.nbplayer.demo"
+    buildFeatures {
+        viewBinding true
+        buildConfig true
+    }
     defaultConfig {
         applicationId "com.renhui.nbplayer.demo"
+
         minSdkVersion 19
         targetSdkVersion 28
         versionCode 1
